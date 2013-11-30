@@ -80,11 +80,14 @@ return array(
 			),
 		),
 	),
+	
+	'behaviors' => array('ApplicationConfigBehavior'),
 
 	// application-level parameters that can be accessed
 	// using Yii::app()->params['paramName']
 	'params'=>array(
 		// this is used in contact page
 		'adminEmail'=>'webmaster@example.com',
+		'defaultLanguage' => 'de' // set your desired default language here
 	),
 );
