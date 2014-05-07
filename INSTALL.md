@@ -34,3 +34,9 @@ If it is not possible to put both users in the same group, set permissions to 77
 Copy protected/config/console.local.tmpl.php to protected/config/console.local.php and protected/config/main.local.tmpl.php
 to protected/config/main.local.php and configure them to your needs. They will override the defaults set in
 protected/config/main.php and protected/config/console.php.
+
+## Run webserver
+
+You can either install this on a real webserver environment or simply run the application with the PHP built-in webserver. Simply execute
+
+	sh bin/server.sh {port}
