@@ -1,5 +1,9 @@
 # How to setup the project
 
+## Adjust composer
+
+Open composer.json and adjust "vendor/name" that it fits your project. Add additional information or dependencies if needed.
+
 ## Install dependencies
 
 First download all dependencies needed by this project. You can do this by executing the composer dependency manager for PHP
