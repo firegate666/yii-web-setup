@@ -1,5 +1,5 @@
 {
-	"name": "ndr/formulare",
+	"name": "firegate666/yii-websetup",
     "config" : {
       "vendor-dir": "protected/extensions"
     },
@@ -11,10 +11,4 @@
 		"stevad/yii-xhprof": "^0.1.1",
 		"lox/xhprof": "dev-master"
 	}
-	"repositories": [
-		{
-			"type": "vcs",
-			"url": "https://github.com/yiisoft/yii.git"
-		}
-	]
 }
