@@ -1,22 +1,24 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
     ],
-    "hash": "f5d35d6c8d32c1a397ae2ac6d910aff8",
+    "hash": "33b31f8cf3e42707c820f9d2300155d0",
+    "content-hash": "a723dfaa4a0e65f50c4148c12a859cd0",
     "packages": [
         {
             "name": "yiisoft/yii",
-            "version": "1.1.14",
+            "version": "1.1.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii.git",
-                "reference": "f0fee98ee84f70f1f3652f65562c9670e919cb4e"
+                "reference": "bca0420b6799b0b2a7966aa90bcd15cb4aa73563"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii/zipball/f0fee98ee84f70f1f3652f65562c9670e919cb4e",
-                "reference": "f0fee98ee84f70f1f3652f65562c9670e919cb4e",
+                "url": "https://api.github.com/repos/yiisoft/yii/zipball/bca0420b6799b0b2a7966aa90bcd15cb4aa73563",
+                "reference": "bca0420b6799b0b2a7966aa90bcd15cb4aa73563",
                 "shasum": ""
             },
             "require": {
@@ -26,6 +28,13 @@
                 "framework/yiic"
             ],
             "type": "library",
+            "autoload": {
+                "classmap": [
+                    "framework/YiiBase.php",
+                    "framework/yii.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -54,17 +63,6 @@
                     "role": "Core framework development"
                 },
                 {
-                    "name": "Timur Ruziev",
-                    "email": "resurtm@gmail.com",
-                    "homepage": "http://resurtm.com/",
-                    "role": "Core framework development"
-                },
-                {
-                    "name": "Paul Klimov",
-                    "email": "klimov.paul@gmail.com",
-                    "role": "Core framework development"
-                },
-                {
                     "name": "Wei Zhuo",
                     "email": "weizhuo@gmail.com",
                     "role": "Project site maintenance and development"
@@ -78,6 +76,17 @@
                     "name": "Jeffrey Winesett",
                     "email": "jefftulsa@gmail.com",
                     "role": "Documentation and marketing"
+                },
+                {
+                    "name": "Timur Ruziev",
+                    "email": "resurtm@gmail.com",
+                    "homepage": "http://resurtm.com/",
+                    "role": "Core framework development"
+                },
+                {
+                    "name": "Paul Klimov",
+                    "email": "klimov.paul@gmail.com",
+                    "role": "Core framework development"
                 }
             ],
             "description": "Yii Web Programming Framework",
@@ -86,30 +95,139 @@
                 "framework",
                 "yii"
             ],
-            "support": {
-                "issues": "https://github.com/yiisoft/yii/issues?state=open",
-                "forum": "http://www.yiiframework.com/forum/",
-                "wiki": "http://www.yiiframework.com/wiki/",
-                "irc": "irc://irc.freenode.net/yii",
-                "source": "https://github.com/yiisoft/yii"
-            },
-            "time": "2013-08-12 00:12:08"
+            "time": "2014-12-21 19:30:17"
         }
     ],
     "packages-dev": [
-
+        {
+            "name": "lox/xhprof",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lox/xhprof.git",
+                "reference": "c64571f892bda1298bad9c5e94ede0bc3f0e4627"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lox/xhprof/zipball/c64571f892bda1298bad9c5e94ede0bc3f0e4627",
+                "reference": "c64571f892bda1298bad9c5e94ede0bc3f0e4627",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.0"
+            },
+            "bin": [
+                "bin/xhprofile"
+            ],
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "xhprof_lib/utils/xhprof_lib.php",
+                    "xhprof_lib/utils/xhprof_runs.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "description": "XHProf: A Hierarchical Profiler for PHP",
+            "homepage": "http://pecl.php.net/package/xhprof",
+            "keywords": [
+                "performance",
+                "profiling"
+            ],
+            "time": "2015-08-31 22:07:48"
+        },
+        {
+            "name": "stevad/yii-xhprof",
+            "version": "v0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Stevad/yii-xhprof.git",
+                "reference": "0561fbc0681afa080449f81905bc9aec38682adc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Stevad/yii-xhprof/zipball/0561fbc0681afa080449f81905bc9aec38682adc",
+                "reference": "0561fbc0681afa080449f81905bc9aec38682adc",
+                "shasum": ""
+            },
+            "require": {
+                "ext-xhprof": "*",
+                "php": ">=5.3.0",
+                "yiisoft/yii": ">=1.1.15"
+            },
+            "require-dev": {
+                "zhuravljov/yii2-debug": "*"
+            },
+            "type": "yii-extension",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Vadym Stepanov",
+                    "email": "vadim.stepanov.ua@gmail.com"
+                }
+            ],
+            "description": "Yii extension to profile application with Facebook XHProf",
+            "homepage": "https://github.com/stevad/yii-xhprof",
+            "keywords": [
+                "debug",
+                "extension",
+                "profiling",
+                "xhprof",
+                "yii"
+            ],
+            "time": "2015-10-16 13:17:06"
+        },
+        {
+            "name": "zhuravljov/yii2-debug",
+            "version": "v1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zhuravljov/yii2-debug.git",
+                "reference": "42677fd84e5e6abc2ead3ae8b82962ccea231713"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zhuravljov/yii2-debug/zipball/42677fd84e5e6abc2ead3ae8b82962ccea231713",
+                "reference": "42677fd84e5e6abc2ead3ae8b82962ccea231713",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.1.0",
+                "yiisoft/yii": ">=1.1.15"
+            },
+            "type": "yii-extension",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Zhuravlev",
+                    "email": "zhuravljov@gmail.com"
+                }
+            ],
+            "description": "Yii debug toolbar",
+            "homepage": "https://github.com/zhuravljov/yii2-debug",
+            "keywords": [
+                "debug",
+                "extension",
+                "yii"
+            ],
+            "time": "2015-01-16 17:14:56"
+        }
     ],
-    "aliases": [
-
-    ],
+    "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [
-
-    ],
-    "platform": [
-
-    ],
-    "platform-dev": [
-
-    ]
+    "stability-flags": {
+        "lox/xhprof": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
 }

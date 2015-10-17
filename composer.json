@@ -4,7 +4,7 @@
       "vendor-dir": "protected/extensions"
     },
 	"require": {
-		"yiisoft/yii": "1.1.16"
+		"yiisoft/yii": "1.1.*"
 	},
 	"require-dev": {
 		"zhuravljov/yii2-debug": "1.4",
