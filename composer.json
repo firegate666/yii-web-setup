@@ -1,5 +1,8 @@
 {
 	"name": "ndr/formulare",
+    "config" : {
+      "vendor-dir": "protected/extensions"
+    },
 	"require": {
 		"yiisoft/yii": ">=1.1.14"
 	},
