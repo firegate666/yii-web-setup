@@ -1,6 +1,8 @@
 <?php
 
 // change the following paths if necessary
+require_once __DIR__ . '/../protected/extensions/autoload.php';
+
 $yii=dirname(__FILE__).'/../protected/extensions/yiisoft/yii/framework/yii.php';
 
 $config = include dirname(__FILE__) . '/../protected/config/main.php';

@@ -4,8 +4,13 @@
       "vendor-dir": "protected/extensions"
     },
 	"require": {
-		"yiisoft/yii": ">=1.1.14"
+		"yiisoft/yii": "1.1.16"
 	},
+	"require-dev": {
+		"zhuravljov/yii2-debug": "1.4",
+		"stevad/yii-xhprof": "^0.1.1",
+		"lox/xhprof": "dev-master"
+	}
 	"repositories": [
 		{
 			"type": "vcs",
