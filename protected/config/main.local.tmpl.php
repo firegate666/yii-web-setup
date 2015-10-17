@@ -3,14 +3,6 @@
  * copy to main.local.php and adjust values to your need
  */
 return array(
-	'preload' => array(
-		'debug',
-		'xhprof'
-	),
-	'import' => [
-		'ext.zhuravljov.yii2-debug.*',
-		'ext.stevad.yii-xhprof.*'
-	],
 	'components'=>array(
 		'db'=>array(
 			'connectionString' => '{{DB_SYSTEM}}:host={{DB_HOST}};dbname={{DB_NAME}}',
@@ -31,6 +23,15 @@ return array(
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
 		),
+		/* enable if you want xhprof debug panel support, adjust xhprof_lib path and report url
+		'preload' => array(
+			'debug',
+			'xhprof'
+		),
+		'import' => [
+			'ext.zhuravljov.yii2-debug.*',
+			'ext.stevad.yii-xhprof.*'
+		],
 		'xhprof' => array(
 			'class' => 'XHProfComponent', // if you install to protected/extensions
 			'libPath' => '/www/protected/extensions/lox/xhprof/xhprof_lib',
@@ -44,5 +45,6 @@ return array(
 				)
 			)
 		),
+		*/
 	)
 );
