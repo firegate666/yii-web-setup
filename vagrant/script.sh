@@ -8,11 +8,18 @@ then
     touch /tmp/apt-get-update
 fi
 
+# PHP SETUP
 /usr/bin/sudo /usr/bin/apt-get -q -y install php5
 /usr/bin/sudo /usr/bin/apt-get -q -y install php5-cli
 /usr/bin/sudo /usr/bin/apt-get -q -y install php5-fpm
 /usr/bin/sudo /usr/bin/apt-get -q -y install php5-common php5-curl php5-json
 /usr/bin/sudo /usr/bin/apt-get -q -y install php5-xdebug php5-xhprof
+
+ln -fs /etc/php5/mods-available/xhprof.ini /etc/php5/apache2/conf.d/
+ln -fs /etc/php5/mods-available/xhprof.ini /etc/php5/cli/conf.d/
+ln -fs /etc/php5/mods-available/xhprof.ini /etc/php5/fpm/conf.d/
+
+# ENV SETUP
 /usr/bin/sudo /usr/bin/apt-get -q -y install htop
 /usr/bin/sudo /usr/bin/apt-get -q -y install supervisor
 /usr/bin/sudo /usr/bin/apt-get -q -y install vim
@@ -23,6 +30,8 @@ if [ ! -f "/usr/bin/composer" ]
 then
     /usr/bin/curl -sS https://getcomposer.org/installer | /usr/bin/sudo /usr/bin/php -- --install-dir=/usr/bin/ --filename=composer
 fi
+
+/usr/bin/composer self-update
 
 # APP SETUP
 
@@ -45,11 +54,7 @@ fi
 # APACHE SETUP
 rm -f /etc/apache2/sites-enabled/000-default.conf
 cp -f /vagrant/files/etc/apache2/sites-available/yii.conf /etc/apache2/sites-available/
-
 ln -fs /etc/apache2/sites-available/yii.conf /etc/apache2/sites-enabled/
 ln -fs /etc/apache2/mods-available/rewrite.load /etc/apache2/mods-enabled/
-ln -fs /etc/php5/mods-available/xhprof.ini /etc/php5/apache2/conf.d/
-ln -fs /etc/php5/mods-available/xhprof.ini /etc/php5/cli/conf.d/
-ln -fs /etc/php5/mods-available/xhprof.ini /etc/php5/fpm/conf.d/
 
 service apache2 restart
