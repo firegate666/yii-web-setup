@@ -1,5 +1,17 @@
 {
-	"name": "firegate666/yii-websetup",
+	"name": "firegate666/yii-web-setup",
+	"description": "Simple PHP daemon wrapper for your custom handler, integrates easily with initd or supervisor",
+	"homepage": "https://github.com/firegate666/SimpleDaemon",
+	"type": "library",
+	"license": "Apache-2.0",
+	"authors": [
+	  {
+		"name": "Marco Behnke",
+		"email": "marco@behnke.biz",
+		"role": "Developer"
+	  }
+	],
+	"minimum-stability": "dev",
     "config" : {
       "vendor-dir": "protected/extensions"
     },
