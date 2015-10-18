@@ -26,10 +26,7 @@ Maybe there are also some more dependencies or modules you suggest having by def
 
 ## How to use this?
 
-- Create your project from this template
- 
-    composer create-project firegate666/yii-web-setup
-
+- Create your project from this template `composer create-project firegate666/yii-web-setup`
 - Adjust package meta information in composer.json
 - That's it, now you are ready to develop your project.
 - use git as versioning tool
