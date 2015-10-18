@@ -4,8 +4,8 @@ echo Updating base linux box
 if [ ! -f "/tmp/apt-get-update" ]
 then
     /usr/bin/sudo /usr/bin/apt-get -q -y update
-    /usr/bin/sudo /usr/bin/apt-get -q -y upgrade
-    /usr/bin/sudo /usr/bin/apt-get -q -y dist-upgrade
+    #/usr/bin/sudo /usr/bin/apt-get -q -y upgrade
+    #/usr/bin/sudo /usr/bin/apt-get -q -y dist-upgrade
     touch /tmp/apt-get-update
 fi
 
