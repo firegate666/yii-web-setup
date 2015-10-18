@@ -1,6 +1,6 @@
 {
 	"name": "firegate666/yii-web-setup",
-	"description": "Simple PHP daemon wrapper for your custom handler, integrates easily with initd or supervisor",
+	"description": "Yii web setup base for your project including vagrant box and xhprof debug panel",
 	"homepage": "https://github.com/firegate666/SimpleDaemon",
 	"type": "library",
 	"license": "Apache-2.0",
