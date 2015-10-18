@@ -8,6 +8,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "boxcutter/ubuntu1504"
   config.vm.network :private_network, ip: "192.168.56.5"
   config.ssh.forward_agent = true
-  config.vm.synced_folder "../", "/www"
+  config.vm.synced_folder "../", "/www", id: "vagrant-root",
+    owner: "www-data",
+    group: "www-data",
+    mount_options: ["dmode=775,fmode=664"]
   config.vm.provision "shell", path: "script.sh"
 end
