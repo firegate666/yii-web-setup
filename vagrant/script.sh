@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo Updating base linux box
 if [ ! -f "/tmp/apt-get-update" ]
 then
     /usr/bin/sudo /usr/bin/apt-get -q -y update
@@ -9,6 +10,7 @@ then
 fi
 
 # PHP SETUP
+echo Install PHP5 stuff
 /usr/bin/sudo /usr/bin/apt-get -q -y install php5
 /usr/bin/sudo /usr/bin/apt-get -q -y install php5-cli
 /usr/bin/sudo /usr/bin/apt-get -q -y install php5-fpm
@@ -20,6 +22,7 @@ ln -fs /etc/php5/mods-available/xhprof.ini /etc/php5/cli/conf.d/
 ln -fs /etc/php5/mods-available/xhprof.ini /etc/php5/fpm/conf.d/
 
 # ENV SETUP
+echo Setup linux environment
 /usr/bin/sudo /usr/bin/apt-get -q -y install htop
 /usr/bin/sudo /usr/bin/apt-get -q -y install supervisor
 /usr/bin/sudo /usr/bin/apt-get -q -y install vim
@@ -28,13 +31,14 @@ ln -fs /etc/php5/mods-available/xhprof.ini /etc/php5/fpm/conf.d/
 
 if [ ! -f "/usr/bin/composer" ]
 then
+    echo Download composer
     /usr/bin/curl -sS https://getcomposer.org/installer | /usr/bin/sudo /usr/bin/php -- --install-dir=/usr/bin/ --filename=composer
 fi
 
 /usr/bin/composer self-update
 
 # APP SETUP
-
+echo Setup the app
 APP_DIR=/www
 LOG_DIR=$APP_DIR/logs
 WEB_DIR=$APP_DIR/htdocs
@@ -48,10 +52,12 @@ cd $APP_DIR
 
 if [ ! -f "$APP_DIR/protected/config/main.local.php" ]
 then
+    echo Copy example application config
     cp -f $APP_DIR/protected/config/main.local.tmpl.php $APP_DIR/protected/config/main.local.php
 fi
 
 # APACHE SETUP
+echo Setup apache webserver
 rm -f /etc/apache2/sites-enabled/000-default.conf
 cp -f /vagrant/files/etc/apache2/sites-available/yii.conf /etc/apache2/sites-available/
 ln -fs /etc/apache2/sites-available/yii.conf /etc/apache2/sites-enabled/
